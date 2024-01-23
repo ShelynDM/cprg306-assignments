@@ -3,7 +3,7 @@ export default function StudentInfo() {
     return (
     <main>
         <h1>Shelyn del Mundo</h1>
-        <p>https://github.com/ShelynDM/cprg306-assignments.git</p>
+        <Link href="https://github.com/ShelynDM/cprg306-assignments.git">Week 2 Github Repo</Link>
     </main>
     );
   }
