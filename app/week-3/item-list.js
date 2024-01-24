@@ -74,8 +74,6 @@ export default function ItemList({ items }) {
       };
     return(
         <main className="m-4 ml-6">
-      <h1 className="text-4xl font-bold">Week 3</h1>
-      <p>These are my shopping list.</p>
       <ul>
         <li>
             <Item
