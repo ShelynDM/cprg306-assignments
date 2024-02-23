@@ -9,7 +9,9 @@ export default function ItemList({ items }) {
             return a.name.localeCompare(b.name);
         } else if (sortBy === "category") {
             return a.category.localeCompare(b.category);
-        }
+        } else if (sortBy === "groupedCategory") {
+            return a.category.localeCompare(b.category);
+        }    
     });
 
 
@@ -23,6 +25,9 @@ export default function ItemList({ items }) {
                 <button
                     className="w-24 m-2 p-2 bg-orange-600  hover:bg-orange-400"
                     onClick={() => setSortBy("category")}>Category</button>
+                <button
+                    className="w-24 m-2 p-2 bg-orange-600  hover:bg-orange-400"
+                    onClick={() => setSortBy("groupedCategory")}>Grouped Category</button>
             </div>
             <div>
                 <ul>
