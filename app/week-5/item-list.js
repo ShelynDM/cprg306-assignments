@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
 import item from "./item.json";
+import Item from "./item";
 
-export default function ItemList({ items }) {
+export default function ItemList() {
     const [sortBy, setSortBy] = useState("name");
     item.sort((a, b) => {
         if (sortBy === "name") {
@@ -32,11 +33,8 @@ export default function ItemList({ items }) {
             <div>
                 <ul>
                     {item.map((item) => (
-                        <li key={item.id} className="w-80 mb-4 p-2 bg-gray-600">
-                            <h2 className="text-2xl font-semibold">{item.name}</h2>
-                            <p className="text-sm">
-                                Buy {item.quantity} in {item.category}
-                            </p>
+                        <li key={item.id} >
+                            <Item name={item.name} quantity={item.quantity} category={item.category}/>
                         </li>
                     ))}
                 </ul>

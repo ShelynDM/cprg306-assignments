@@ -15,14 +15,14 @@ export default function Page() {
 
     return (
       <main>
-        <div className="p-2 bg-slate-800">
-            <h1 className="text-3xl font-bold">Shopping List</h1>
-            <div>
-              <NewItem onAddItem={handleAddItem}/>
-            </div>
-            <div>
-              <ItemList items={items}/>
-            </div>
+        <h1 className="text-3xl font-bold bg-slate-800">Shopping List</h1>
+        <div className="p-2 bg-slate-800 flex">
+          <div>
+            <NewItem onAddItem={handleAddItem}/>
+          </div>
+          <div>
+            <ItemList items={items}/>
+          </div>
         </div>
         </main>
     );
