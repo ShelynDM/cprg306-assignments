@@ -13,10 +13,13 @@ export default function NewItem( {onAddItem} ) {
             alert("Please enter an item name");
             return;
         }
+        
         const newId = Math.random().toString(36);
         const newItem = {id: newId, name: name, quantity: quantity, category: category.toLowerCase()};
         onAddItem(newItem);
+
         console.log(newItem);
+
         setName("");
         setQuantity(1);
         setCategory("Produce");
@@ -24,6 +27,7 @@ export default function NewItem( {onAddItem} ) {
     };
 
     return (
+        <main>
         <div className="flex">
             <form onSubmit={handleSubmit} className="m-4 p-5 rounded-md bg-gray-600">
                 <div>
@@ -71,5 +75,6 @@ export default function NewItem( {onAddItem} ) {
                     </button>
             </form>
         </div>
+        </main> 
     );
 }

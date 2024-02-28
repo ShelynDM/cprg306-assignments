@@ -20,14 +20,17 @@ export default function ItemList({ items }) {
             <div className=" mb-8">
                 <strong className="font-bold m-4">Sort by:</strong>
                 <button
-                    className="w-24 m-2 p-2 bg-orange-600 hover:bg-orange-400"
-                    onClick={() => setSortBy("name")}>Name</button>
+                    className="w-24 m-2 p-2 bg-orange-700 hover:bg-orange-400"
+                    onClick={() => setSortBy("name")}
+                    style={{backgroundColor: sortBy === "name" ? "#ff751a" : ""}}>Name</button>
                 <button
-                    className="w-24 m-2 p-2 bg-orange-600  hover:bg-orange-400"
-                    onClick={() => setSortBy("category")}>Category</button>
+                    className="w-24 m-2 p-2 bg-orange-700  hover:bg-orange-400"
+                    onClick={() => setSortBy("category")}
+                    style={{backgroundColor: sortBy === "category" ? "#ff751a" : ""}}>Category</button>
                 <button
-                    className="w-24 m-2 p-2 bg-orange-600  hover:bg-orange-400"
-                    onClick={() => setSortBy("groupedCategory")}>Grouped Category</button>
+                    className="w-24 m-2 p-2 bg-orange-700  hover:bg-orange-400"
+                    onClick={() => setSortBy("groupedCategory")}
+                    style={{backgroundColor: sortBy === "groupedCategory" ? "#ff751a" : ""}}>Grouped Category</button>
             </div>
             <div>
                 <ul>
