@@ -20,13 +20,13 @@ export default function ItemList({ items, onItemSelect }) {
             <div className=" mb-8">
                 <strong className="font-bold m-4">Sort by:</strong>
                 <button
-                    className="w-24 m-2 p-2 bg-blue-600 hover:bg-blue-400"
+                    className="w-24 m-2 p-2 bg-blue-400 hover:bg-blue-600"
                     onClick={() => setSortBy("name")}
-                    style={{backgroundColor: sortBy === "name" ? "#5885AF" : ""}}>Name</button>
+                    style={{backgroundColor: sortBy === "name" ? "#086DFF" : ""}}>Name</button>
                 <button
-                    className="w-24 m-2 p-2  bg-blue-600 hover:bg-blue-400"
+                    className="w-24 m-2 p-2  bg-blue-400 hover:bg-blue-600"
                     onClick={() => setSortBy("category")}
-                    style={{backgroundColor: sortBy === "category" ? "#5885AF" : ""}}>Category</button>
+                    style={{backgroundColor: sortBy === "category" ? "#086DFF" : ""}}>Category</button>
             </div>
             <div>
                 <ul>

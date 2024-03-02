@@ -30,16 +30,12 @@ export default function MealIdeas({ingredient}) {
                     <p className="m-2">Here are some meal ideas using {ingredient}: </p>
                     <ul className="p-2 bg-slate-800"> 
                         {meals.map((meal) => (
-                            <div className="m-2 p-2 bg-slate-600 hover:bg-blue-600" key={meal.idMeal}>
-                                <li>
-                                    <p>{meal.strMeal}</p>
-                                </li>
-                            </div>
+                            <li className="m-2 p-2 bg-slate-600 hover:bg-blue-600" key={meal.idMeal}>
+                                <p>{meal.strMeal}</p>
+                            </li>
                         ))}
                     </ul>
                 </div>
-
-
             ) : (
                 <p className="m-2">No meal ideas found for {ingredient}.</p>
             )}      
