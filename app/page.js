@@ -24,6 +24,9 @@ export default function Page() {
             <li className="hover:text-blue-400 hover:underline">
               <Link href = "week-7">Week 7 Assignment</Link>
             </li>
+            <li className="hover:text-blue-400 hover:underline">
+              <Link href = "week-8">Week 8 Assignment</Link>
+            </li>
           </ul>
         </div>
       </div>
