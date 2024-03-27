@@ -18,7 +18,7 @@ export default function Page() {
 
   useEffect(() => {
       loadItems();
-  }, [items]);
+  }, [user]);
 
 function handleAddItem(newItem) {
     addItem(user.uid, newItem).then((docRef) => {
