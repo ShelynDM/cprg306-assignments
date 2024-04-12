@@ -5,11 +5,16 @@ import Link from "next/link";
 import { useUserAuth } from "./_utils/auth-context";
 // Use the useUserAuth hook to get the user object and the login and logout functions
 export default function Page() {
-    const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
+    const { user, gitHubSignIn, googleSignIn, firebaseSignOut } = useUserAuth();
 
     // Sign in to Firebase with GitHub authentication
     const signIn = async () => {
     await gitHubSignIn();
+    }
+
+    // Sign in to Firebase with Google authentication
+    const signInGoogle = async () => {
+    await googleSignIn();
     }
 
     const signOut = async () => {
@@ -38,7 +43,10 @@ export default function Page() {
 
                 </div>
                 ) : (
-                <button onClick={signIn} className="m-10 p-4 bg-slate-800 hover:bg-blue-600 ">Sign in with GitHub</button>
+                <div>
+                    <button onClick={signIn} className="m-10 p-4 bg-slate-800 hover:bg-blue-600 ">Sign in with GitHub</button>
+                    <button onClick={signInGoogle} className="m-10 p-4 bg-slate-800 hover:bg-blue-600 ">Sign in with Google</button>
+                </div>
                 )}
             </div>
         </div>
